@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Calculation Form</title>
+    <meta charset="utf-8"/>	
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel='icon' href='img/favicon.ico' type='image/x-icon'>
+  </head>
+  
+  <body>
+  
+	<div>	  
+		  <h2 style="text-align:center;">--Math computation Form--</h2>
+
+		  
+		  <h5 style="text-align:center; font-size:30px;"> Computing some value from taking in user inputs.</h5>
+		  <hr style="margin-bottom:25px;" />
+		  <!-- Place your form with labels here-->
+		  <div class="force">
+			<header class="calcTitle">Force Calculator</header>
+		  <form id="forceFormula" name="forceFormula" action="index.html" method="post" target="_self">
+		  
+			<label for="mass" class="requestInfo">Please enter the mass of the object here.</label><br>
+			<input type="number" id="mass" name="objectMass" placeholder="0" autofocus="autofocus"><br>
+		
+			<label for="accel" class="requestInfo">Please enter the acceleration of the object here.</label><br>
+			<input type="number" id="accel" name="objectAccel" placeholder="0"><br>
+			
+		  </form>
+		  <input type="button" id="button" name="computeforce" value="calculate" onclick="computeForce()"/><br>
+		  <label class="output" ><strong>Force = <output id="result"></output></strong></label>
+		  </div>
+		  
+		  
+		  
+		  <div class="kinetic">
+			<header class="calcTitle">Displacement Calculator</header>
+		  <form id="kineticFormula" name="kineticFormula" action="index.html" method="post" target="_self">
+		  
+			<label for="velocity" class="requestInfo">Please enter the velocity</label><br>
+			<input type="number" id="velocity" name="velocity" placeholder="0"><br>
+			
+			<label for="time" class="requestInfo">Please enter the time</label><br>
+			<input type="number" id="time" name="time" placeholder="0"><br>
+			
+			<label for="acceleration" class="requestInfo">Please enter the acceleration rate</label><br>
+			<input type="number" id="acceleration" name="accel" placeholder="0"><br>
+			
+		  </form>
+		  	<input type="button" id="button2" name="button2" value="calculate" onclick="computeDisplacement()"><br>
+			<label class="output"><strong>Displacement = </strong><output id="result2"></output></label>	
+		  </div>
+		  
+		  
+		  
+		  <div class="quadratic">
+			<header class="requestInfo">We can calculate the quadratic formula by clicking the button below.</header>
+				<input type="button" id="button3" name="button3" value="calculate" onclick="computeQuadratic()"><br>
+				<output id="quadratic" class="output"></output>
+		  </div>
+		  
+		  
+		  
+		   <div class="principal">
+			<header class="requestInfo">We can also calculate principal if you click the button below.</header>
+				<input type="button" id="button4" name="button4" value="calculate" onclick="computePrincipal()"><br>
+				<output id="principal" class="output"></output>
+		  </div>
+		  
+		<hr style="margin-top:25px;" />
+	</div>
+	<p id="display"></p>
+	<script src="js/script.js"> </script>
+
+  <footer>Brought to you by my <img src="img/couch-solid.svg" class="iconOne" alt="Couch"></footer>
+	</body>
+  </html>
